@@ -70,3 +70,25 @@ ul li a:hover{
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid pink;
 }
+
+/*Icones das redes sociais*/
+
+#social__links {
+    display: flex;
+    padding: 24px 0;
+    justify-content: center;
+    font-size: 28px;
+}
+
+#social__links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+    padding: 16px;
+}
+
+#social__links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
