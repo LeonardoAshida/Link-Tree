@@ -5,13 +5,32 @@
     box-sizing: border-box;
 }
 
+/*Criação de variáveis para ser usado em mais de um elemento no css, deve-se substituir o valor do conteúdo para a variável*/
+:root{
+    --text-color: white;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --border-color: rgba(255, 255, 255, 0.50);
+    --bg-button-color: rgba(255, 255, 255, 0.10);
+    --bg-button-color-hover: rgba(255, 255, 255, 0.05);
+    --bg-social-color-hover:  rgba(255, 255, 255, 0.2);
+}
+
+.light__mode{
+    --text-color: black;
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --border-color: rgba(0, 0, 0, 0.5);
+    --bg-button-color: rgba(0, 0, 0, 0.10);
+    --bg-button-color-hover: rgba(0, 0, 0, 0.05);
+    --bg-social-color-hover: rgba(0, 0, 0, 0.1);
+}
+
 body{
-    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+    background: var(--bg-url) no-repeat top center/cover;
 }
 
 body * {
     font-family: 'Inter', sans-serif;
-    color: #FFFFFF;
+    color: var(--text-color);
 }
 
 #container{
@@ -56,8 +75,8 @@ Ul li a{
     text-decoration: none;
     font-weight: bold;
 
-    background: rgba(255, 255, 255, 0.10);
-    border: 1px solid rgba(255, 255, 255, 0.50);
+    background: var(--bg-button-color);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -67,8 +86,8 @@ Ul li a{
 /*pseudo-seletor */
 
 ul li a:hover{
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid pink;
+    background: var(--bg-button-color-hover);
+    border: 1px solid var(--text-color);
 }
 
 /*Icones das redes sociais*/
@@ -90,5 +109,10 @@ ul li a:hover{
 }
 
 #social__links a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--bg-social-color-hover);
+}
+
+footer{
+    padding: 24px 0;
+    text-align: center;
 }
